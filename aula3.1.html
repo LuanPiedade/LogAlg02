@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 3.1 </title>
+</head>
+
+<body>
+    <SCript>
+        // Classe Users
+        class Users {
+
+            // Atributos
+            #name;
+            #email;
+            #password;
+            #birth;
+
+            // Método construtor
+            constructor(userName, userEmail, userPass) {
+                this.setName(userName);
+                this.#email = userEmail;
+                this.#password = userPass;
+
+            }
+
+            setName(userNewName) {
+
+                /**
+                 * Aqui você deveria sanitizar e validar o nome do usuário.
+                 */
+
+                userNewName = userNewName.trim();
+
+                this.#name = userNewName;
+            }
+
+            setEmail(userNewNameEmail) {
+                // Valida e sanitize...
+                this.#email = userNewNameEmail;
+            }
+
+            setPass(userNewPass) {
+                // Valide e sanitize aqui também
+                this.#password = userNewPass;
+
+            }
+
+            // Setter para birth
+            setBirth(date) {
+                this.#birth = date;
+
+            }
+
+            // Getters - Lê valores de atributos privados.
+            getName() {
+                return this.#name;
+
+            }
+
+            getEmail() {
+                return this.#email;
+
+            }
+
+            getPass() {
+                return this.#password;
+
+            }
+
+            getBirth() {
+                return this.#birth;
+
+            }
+
+        }
+
+        // Criando objeto
+        var chefe = new Users('Jeronimo', 'jero@nimo.com', '123');
+
+        // Exibindo dados do objeto
+        console.log(chefe)
+
+        // Define o atributo birth
+        chefe.setBirth('2000-10-14');
+
+        // Qual o nome do 'chefe'
+        console.log(chefe.getName());
+    </SCript>
+</body>
+
+</html>

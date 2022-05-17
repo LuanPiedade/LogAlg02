@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1.1</title>
+</head>
+
+<body>
+    <script>
+
+        // Crie uma classe que define frutas de qualquer tipo.
+        // Class frutas.
+        class Frutas {
+
+            // Atributos privados
+            #nome;
+            #cor;
+            #peso;
+
+
+
+
+
+
+
+
+            // Crie 'setters' para todos os atributos.
+            setNome(nome) {
+                this.#nome = nome;
+            }
+
+            setCor(cor) {
+                this.#cor = cor;
+
+            }
+
+            setPeso(peso) {
+                this.#peso = peso;
+            }
+
+            // Crie 'getters' para todos os atributos.
+
+            getNome() {
+                return this.#nome;
+            }
+
+            getCor() {
+                return this.#cor
+
+            }
+
+            getPeso() {
+                return this.#peso;
+            }
+
+        }
+
+        // Criando objetos.
+        var uva = new Frutas();
+
+        // Define / altera atributos
+        uva.setNome('uva');
+        uva.setCor('verde');
+        uva.setPeso('10g');
+
+        // Exibindo dados da fruta.
+        console.log('uva: ', uva);
+
+        document.write(uva.getNome())
+        document.write(uva.getPeso())
+    </script>
+
+</body>
+
+</html>
