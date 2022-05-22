@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1.3</title>
+</head>
+
+<body>
+    <h1>Exercício 1.3</h1>
+    <ul>
+        <li>Crie uma classe para definir animais de estimação;</li>
+        <li>Crie os atributos comuns para todos os animais deste tipo;</li>
+        <li>Os atributos devem ser privados;</li>
+        <li>Crie 'getters' e 'setters' para todos os atributos que você definir;</li>
+        <li>Crie um 'construtor' que receba os atributos mais importantes;</li>
+        <li>Crie pelo menos 2 objetos instanciando a classe;</li>
+        <li>Defina os atributos do novo objeto usando os 'setters';</li>
+        <li>Exiba o objeto no console do JavaScript;</li>
+        <li>Exiba pelo menos dois atributos no documento, usando os 'getters'.</li>
+        <li>Crie o diagrama de classe para esta classe.</li>
+    </ul>
+
+    <script>
+
+        // Cria classe 'Animais'
+        class Animais {
+
+            // Atributos privados
+            #nome;
+            #cor;
+            #idade;
+            #peso;
+            #birth;
+
+            // Método construtor
+            constructor(userNome, userCor, userIdade, userPeso) {
+                this.setNome(userNome)
+                this.setCor(userNome);
+                this.setIdade(userCor);
+                this.setIdade(userIdade);
+                this.setPeso(userPeso);
+            }
+
+            // Crie 'setters' para todos os atributos.
+            setNome(nome) {
+                this.#nome = nome;
+            }
+            setCor(cor) {
+                this.#cor = cor;
+            }
+            setIdade(idade) {
+                this.#idade = idade;
+            }
+            setPeso(peso) {
+                this.#peso = peso;
+            }
+            setBirth(birth) {
+                this.#birth = birth;
+            }
+
+
+            // Crie 'getters' para todos os atributos.
+            getNome() {
+                return this.#nome;
+            }
+            getCor() {
+                return this.#cor;
+            }
+            getIdade() {
+                return this.#idade;
+            }
+            getPeso() {
+                return this.#peso;
+            }
+            getBirth() {
+                return this.#birth
+            }
+
+        }
+
+        // Instáncia
+        let cavalo = new Animais();
+        let cachorro = new Animais();
+
+        // Define atributos
+        cavalo.setNome('Felicia');
+        cavalo.setCor('Marrom');
+        cavalo.setIdade('35 anos');
+        cavalo.setPeso('120kg');
+        cavalo.setBirth('1998-02-19');
+
+        // Define o novo atributos
+        cachorro.setNome('Thor');
+        cachorro.setCor('Branco');
+        cachorro.setIdade('5 anos');
+        cachorro.setPeso('50kg');
+        cachorro.setBirth('1997-07-20');
+
+        // Exibe objeto no console
+        console.log('Animais: ', cavalo);
+        console.log('Animais: ', cachorro);
+
+        // Exibe objeto no documento
+        document.write(`
+            <h4>Cavalo:</h4>
+        <ul>
+            <li>Nome: ${cavalo.getNome()}</li>
+            <li>Cor: ${cavalo.getCor()}</li>
+            <li>Idade: ${cavalo.getIdade()}</li>
+            <li>Peso: ${cavalo.getPeso()}</li>
+            <li>Birth: ${cavalo.getBirth()}</li>
+           
+        </ul>
+
+        <h4>Cachorro:</h4>
+        <ul>
+            <li>Nome: ${cachorro.getNome()}</li>
+            <li>Cor: ${cachorro.getCor()}</li>
+            <li>Idade: ${cachorro.getIdade()}</li>
+            <li>Peso: ${cachorro.getPeso()}</li>
+            <li>Birth: ${cachorro.getBirth()}</li>
+        </ul>
+        
+        `);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 2.1</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Classe que define usuários.
+        class User {
+
+            // Atributos privados.
+            #name = '';
+            #email = '';
+            #password = '';
+
+            // Métodos 'set'.
+            // 'this' faz referência ao próprio opbjeto.
+            setName(name) {
+                this.#name = name;
+            }
+
+            setEmail(email_address) {
+
+                // Valida e-mail
+                if (email_address.indexOf('@') > 0)
+                    this.#email = email_address;
+                else
+                    console.error('E-mail inválido!');
+
+            }
+
+            trocaSenha(x) {
+                this.#password = x;
+            }
+
+        }
+
+        // Cria uma instância de 'User'.
+        let joca = new User();
+
+        // Define / altera atributos.
+        joca.setName('Joca da Silva');
+        joca.setEmail('joca@silva.com');
+        joca.trocaSenha('123abc');
+
+        // Exibir o objeto.
+        console.log(joca);
+
+        // Criar um novo usuário
+        var programador = new User();
+
+        // Atribuir...
+        programador.setName('Luan Piedade');
+        programador.setEmail('luan@carneiro.com');
+        programador.trocaSenha('lpc_cpl');
+
+        // Consumir.
+        console.log(programador);
+
+    </script>
+
+</body>
+
+</html>
